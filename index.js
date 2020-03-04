@@ -49,6 +49,10 @@ class SignatureView extends Component {
     }
   };
 
+  triggerSave () {
+    this.webview.injectJavaScript('triggerSave();');  
+  }
+
   _renderError = args => {
     console.log("error", args);
   };
@@ -57,6 +61,7 @@ class SignatureView extends Component {
     return (
       <View style={styles.webBg}>
         <WebView
+          ref={ref => (this.webview = ref)}
           useWebKit={true}
           source={this.source}
           onMessage={this.getSignature}

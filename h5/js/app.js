@@ -34,6 +34,10 @@ const content = `
             window.postMessage(signaturePad.toDataURL());
         }
     });
+
+    function triggerSave() {
+        saveButton.click();
+    }
 `;
 
 export default content;
