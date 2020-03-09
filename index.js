@@ -51,7 +51,11 @@ class SignatureView extends Component {
 
   triggerSave () {
     this.webview.injectJavaScript('triggerSave();');  
-  }
+  };
+
+  triggerClear () {
+    this.webview.injectJavaScript('triggerClear();');  
+  };
 
   _renderError = args => {
     console.log("error", args);

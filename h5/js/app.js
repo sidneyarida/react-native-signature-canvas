@@ -38,6 +38,10 @@ const content = `
     function triggerSave() {
         saveButton.click();
     }
+
+    function triggerClear() {
+        clearButton.click();
+    }
 `;
 
 export default content;
